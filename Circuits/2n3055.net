@@ -1,0 +1,17 @@
+* /Users/jessshoes/Library/CloudStorage/OneDrive-Personal/Documents/Circuits/2n3055.asc
+Q1 P001 N002 P002 0 BC547B
+RE P002 0 4
+RC N001 P001 4k
+R1 N001 N002 100k
+R2 N002 0 20k
+V1 N002 0 SINE(0 25m 150) AC 25m 0 Rser=16000
+C1 Output P001 100µ
+V2 N001 0 DC 4
+R3 Output 0 7.8k
+.model NPN NPN
+.model PNP PNP
+.lib /Users/jessshoes/Library/Application Support/LTspice/lib/cmp/standard.bjt
+.op
+.tran 0 10m
+.backanno
+.end
